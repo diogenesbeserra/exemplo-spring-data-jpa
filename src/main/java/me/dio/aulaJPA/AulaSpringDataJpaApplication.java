@@ -10,4 +10,6 @@ public class AulaSpringDataJpaApplication {
 		SpringApplication.run(AulaSpringDataJpaApplication.class, args);
 	}
 
+
+
 }
