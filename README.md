@@ -42,3 +42,11 @@ No mais, ao startar a aplicação, no CommandLineRunner injetamos um repositóri
 
 - E só!!! 
 
+##
+## Aula JPA Repository
+
+- Query méthod: o JPA constrói o método dinamicamente para nós. Só precisamos criar a assinatura do método na interface que implementa a JpaRepository passando algumas 		palavras chaves e o framework cria o método com uma consulta customizada para a situação desejada.
+- Query override: usando a anotação @Query associamos um método da interface a um comando sql que podemos escrever explicitamente recebendo os parametros desejados. 
+
+
+
