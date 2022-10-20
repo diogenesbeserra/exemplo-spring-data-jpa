@@ -9,3 +9,34 @@ Estrutura Básica para Mapeamento de Objeto Relacional(ORM)
 - criamos na camada repositório simplesmente uma interface que extende de outra interface, a JpaRepository<Tipo do Objeto, Tipo do ID>. E só. o frameowrk já implementa todos os métodos necessários para persistencia dos dados.
 
 No mais, ao startar a aplicação, no CommandLineRunner injetamos um repositório, criamos um Bean do Usuário e passamos ele para o repositorio.
+
+## 
+## Conexão com Postgres
+
+- Apaga a dependencia do H2 Database no Pom.xml e insere a dependencia do PostgreSql
+  
+  <!-- POSTGRES -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+    
+- adiciona no application.properties as configurações do databasa
+
+
+    #Opcional
+    spring.jpa.show-sql=true
+
+    #se existe tabela faz update. Se não existe tabela cria nova
+    spring.jpa.hibernate.ddl-auto=update
+
+    #Obrigátorio de acordo com o seu banco de dados
+    spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+    spring.datasource.driverClassName=org.postgresql.Driver
+    spring.datasource.url=jdbc:postgresql://localhost:5432/DIO-aula-SpringDataJpa
+    spring.datasource.username=postgres
+    spring.datasource.password=postgres
+
+- E só!!! 
+
