@@ -1,5 +1,6 @@
 # exemplo-spring-data-jpa
-## Curso DIO Imersão no Spring Framework com Spring Boot - Aula Spring Data JPA
+## Curso DIO Imersão no Spring Framework com Spring Boot 
+## Aula Spring Data JPA
 
 Para iniciar devemos criar o projeto no Spring Initializr https://start.spring.io/ acrescentando as dependencias do Spring Data JPA e do banco de dados que iremos utilizar no projeto. Nesse exemplo usamos o H2 Database
 
@@ -11,7 +12,8 @@ Estrutura Básica para Mapeamento de Objeto Relacional(ORM)
 No mais, ao startar a aplicação, no CommandLineRunner injetamos um repositório, criamos um Bean do Usuário e passamos ele para o repositorio.
 
 ## 
-## Conexão com Postgres
+
+## Aula Conexão com Postgres
 
 - Apaga a dependencia do H2 Database no Pom.xml e insere a dependencia do PostgreSql
   
